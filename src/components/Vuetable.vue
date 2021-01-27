@@ -262,7 +262,7 @@
               <td v-if="hasCallback(field)" 
                 :key="fieldIndex"
                 :class="field.dataClass"
-                v-html="callCallback(field, item)"
+                v-text="callCallback(field, item)"
                 @click="onCellClicked(item, field, $event)"
                 @dblclick="onCellDoubleClicked(item, field, $event)"
                 @contextmenu="onCellRightClicked(item, field, $event)"
@@ -270,7 +270,7 @@
               <td v-else 
                 :key="fieldIndex"
                 :class="field.dataClass"
-                v-html="getObjectValue(item, field.name, '')"
+                v-text="getObjectValue(item, field.name, '')"
                 @click="onCellClicked(item, field, $event)"
                 @dblclick="onCellDoubleClicked(item, field, $event)"
                 @contextmenu="onCellRightClicked(item, field, $event)"
